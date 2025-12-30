@@ -752,8 +752,7 @@ namespace Simulator
 		Raider = 2,
 		Unk3 = 3,
 		Bomber = 4,
-		/// Only has weapon 'abduct'
-		Unk5 = 5,
+		Abductor = 5, /// Only has weapon 'abduct'. Used in CRG / TRG
 		Defender = 6,
 		Unk7 = 7,
 		AmbushPirate = 8,
