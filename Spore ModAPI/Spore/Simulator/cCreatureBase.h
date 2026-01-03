@@ -79,6 +79,7 @@ namespace Simulator
 
 		kCreatureFlagIsHungry = 0x100,
 		kCreatureFlagIsPlayerAvatar = 0x200,
+		kCreatureFlagIsEpic = 0x2000,
 	};
 
 	/// The base class for all creatures in the Simulator.
