@@ -72,7 +72,9 @@ namespace Simulator
 		/// Returns the vector with the members of the tribe, including non-selectables
 		/* 90h */	virtual eastl::vector<cCreatureCitizenPtr>& GetTribeMembers();
 		/// Returns a vector of all selectable members of the tribe (excludes baby creatures)
-		/* 94h */	virtual eastl::vector<cCreatureCitizenPtr>& GetSelectableMembers();
+		/// NOTE: Returns cCreatureCitizenPtr and non-citizen object pointers.
+		/// TODO: should this be GetSelectableObjects instead?
+		/* 94h */	virtual eastl::vector<cSpatialObjectPtr>& GetSelectableMembers();
 		/* 98h */	virtual cCreatureCitizen* SpawnMember(int age);
 		/// Removes a member of the tribe. index seems to cause issues if not 0.
 		/* 9Ch */	virtual void func9Ch(int index, bool);
