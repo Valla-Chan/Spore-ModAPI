@@ -136,14 +136,14 @@ namespace Terrain
 		, mpTextureCliff()
 		, mpAtmospherePackedCurves()
 		, mpAboveColorRamp()
-		, field_38()
+		, mpAboveDetailNoise()
 		, field_3C()
 		, field_40()
 		, field_44()
 		, field_48()
 		, field_4C()
-		, field_50()
-		, field_54()
+		, mpJetStream()
+		, mpPCAWater()
 	{
 
 	}

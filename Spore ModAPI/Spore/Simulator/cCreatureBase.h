@@ -79,7 +79,7 @@ namespace Simulator
 
 		kCreatureFlagIsHungry = 0x100,
 		kCreatureFlagIsPlayerAvatar = 0x200,
-		kCreatureFlagIsEpic = 0x2000,
+		kCreatureFlagUnkAngry = 0x2000, // something to do with if the creature is currently attacking another?
 	};
 
 	/// The base class for all creatures in the Simulator.

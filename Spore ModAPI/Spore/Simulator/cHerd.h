@@ -48,8 +48,8 @@ namespace Simulator
 		/* 80h */	int mCurrentFeedingGrounds;  // -1
 		/* 84h */	bool mOwnedByAvatar;
 		/* 85h */	bool mbShouldEvolve;  // true
-		/* 88h */	int mArchetype;  //TODO
-		/* 8Ch */	int mArchetypeGroup;
+		/* 88h */	uint32_t mArchetype;  // herd entry in 0x02f98b67 (herdtypes~) that defines this herd type
+		/* 8Ch */	uint32_t mArchetypeGroup;
 		/* 90h */	int mScheduleIndex;
 		/* 94h */	float mDNAEvolutionThreshold;
 		/* 98h */	ResourceKey mOwnerSpeciesKey;

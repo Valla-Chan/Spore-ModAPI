@@ -38,14 +38,14 @@ namespace Terrain
 			/* 94h */	Math::Vector2 kEffectTemperatureLowRange;
 			/* 9Ch */	Math::Vector2 kEffectTemperatureMedRange;
 			/* A4h */	Math::Vector2 kEffectTemperatureHighRange;
-			/* ACh */	Math::Vector4 kNightLightingTint;  // last value is kNightLumBlend
+			/* ACh */	Math::ColorRGBA kNightLightingTint;  // last value is kNightLumBlend
 			/* BCh */	int field_BC;  // not initialized
-			/* C0h */	Math::Vector3 kDayLightColor;
-			/* CCh */	Math::Vector3 kDayShadowColor;
-			/* D8h */	Math::Vector3 kDuskLightColor;
-			/* E4h */	Math::Vector3 kDuskShadowColor;
-			/* F0h */	Math::Vector3 kNightLightColor;
-			/* FCh */	Math::Vector3 kNightShadowColor;
+			/* C0h */	Math::ColorRGB kDayLightColor;
+			/* CCh */	Math::ColorRGB kDayShadowColor;
+			/* D8h */	Math::ColorRGB kDuskLightColor;
+			/* E4h */	Math::ColorRGB kDuskShadowColor;
+			/* F0h */	Math::ColorRGB kNightLightColor;
+			/* FCh */	Math::ColorRGB kNightShadowColor;
 			/* 108h */	Math::Vector4 kDuskDawnStartEnd;
 			/* 118h */	float kAboveColorRampSeaScaleBaseVal;
 			/* 11Ch */	float kAboveColorRampSeaScaleScaleVal;
@@ -130,16 +130,16 @@ namespace Terrain
 			/* 20h */	TexturePtr mpIceDetailMid;
 			/// From texture `ice_ramp.rw4`
 			/* 24h */	TexturePtr mpIceRamp;
-			/// From texture `0x9D64F524.rw4`
+			/// From texture `beach_generic.rw4`
 			/* 28h */	TexturePtr mpTextureBeach;
-			/// From texture `0x3F05C913.rw4`
+			/// From texture `cliff_base.rw4`
 			/* 2Ch */	TexturePtr mpTextureCliff;
 			/// From texture `atmosphere_packed_curves.rw4`
 			/* 30h */	TexturePtr mpAtmospherePackedCurves;
 			/// Texture created in code with ID `AboveColorRamp`
 			/* 34h */	TexturePtr mpAboveColorRamp;
 			/// From bitmap `0xC5D262E4.8bitImage`
-			/* 38h */	ResourceObjectPtr field_38;
+			/* 38h */	ResourceObjectPtr mpAboveDetailNoise;
 			/// From bitmap `0x362AC39E.32bitImage`
 			/* 3Ch */	ResourceObjectPtr field_3C;
 			/// From bitmap `0x2EC45F93.32bitImage`
@@ -151,9 +151,9 @@ namespace Terrain
 			/// From bitmap `0xF30D0A76.32bitImage`
 			/* 4Ch */	ResourceObjectPtr field_4C;
 			/// From bitmap `0xC71EF96A.32bitImage`
-			/* 50h */	ResourceObjectPtr field_50;
+			/* 50h */	ResourceObjectPtr mpJetStream;
 			/// `pcawater.pcaw`
-			/* 54h */	ResourceObjectPtr field_54;
+			/* 54h */	ResourceObjectPtr mpPCAWater;
 			/* 58h */	Math::ColorRGBA nightLightTint;
 			/* 68h */	Math::ColorRGBA dayLightColor;
 			/* 78h */	Math::ColorRGBA duskLightColor;
@@ -163,7 +163,7 @@ namespace Terrain
 			/* B8h */	Math::ColorRGBA nightShadowColor;
 			/* C8h */	Math::Vector4 duskDawnStartEnd;
 			/* D8h */	char padding_D8[0x60];
-			/* 138h */	Math::Vector4 waterColor;
+			/* 138h */	Math::ColorRGBA waterColor;
 			/* 148h */	Math::Vector4 innerParms;
 			/* 158h */	Math::Vector4 field_158;
 			/* 168h */	Math::Vector4 field_168;

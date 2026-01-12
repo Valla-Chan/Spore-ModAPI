@@ -148,7 +148,7 @@ namespace Simulator
 		/* 6B4h */	int field_6B4;
 		/* 6B8h */	eastl::vector<int> mFruits;	//unk type
 		/* 6CCh */	bool mIsGameMode;	//true if cSpeciesProfile was called in gameMode, false otherwise
-		/* 6D0h */	uint32_t mFootWeaponOrMouthType;
+		/* 6D0h */	uint32_t mFootType;
 		/* 6D4h */	eastl::fixed_vector<cCreatureAbility*, 20> mActiveAbilities;  //TODO abilities
 		/* 73Ch */	eastl::fixed_vector<cCreatureAbility*, 20> mPassiveAbilities;
 		/* 7A4h */	eastl::fixed_vector<int, 20> mSocialAbilityIndexes;
