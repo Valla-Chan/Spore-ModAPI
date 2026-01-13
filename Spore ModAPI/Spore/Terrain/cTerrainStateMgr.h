@@ -247,7 +247,7 @@ namespace Terrain
 		/* 620h */	float field_620;
 		/* 624h */	float field_624;
 		/* 628h */	char field_628[0x194];
-		/* 7BCh */	bool field_7BC;
+		/* 7BCh */	bool mbEnableAmbientEffects; // Requires weather level 2
 		/* 7C0h */	char field_7C0[0x180];
 		/* 940h */	char field_940[0x180];
 		/* AC0h */	char field_AC0[0x180];
