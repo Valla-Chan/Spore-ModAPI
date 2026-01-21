@@ -140,17 +140,17 @@ namespace Terrain
 			/* 34h */	TexturePtr mpAboveColorRamp;
 			/// From bitmap `0xC5D262E4.8bitImage`
 			/* 38h */	ResourceObjectPtr mpAboveDetailNoise;
-			/// From bitmap `0x362AC39E.32bitImage`
-			/* 3Ch */	ResourceObjectPtr field_3C;
-			/// From bitmap `0x2EC45F93.32bitImage`
-			/* 40h */	ResourceObjectPtr field_40;
-			/// From bitmap `0x7C6B9FD9.32bitImage`
-			/* 44h */	ResourceObjectPtr field_44;
-			/// From bitmap `0x88566056.32bitImage`
-			/* 48h */	ResourceObjectPtr field_48;
+			/// From bitmap `planet_color_ramps_dead.32bitImage`
+			/* 3Ch */	ResourceObjectPtr mpPlanetColorRampsDead;
+			/// From bitmap `planet_color_ramps_living.32bitImage`
+			/* 40h */	ResourceObjectPtr mpPlanetColorRampsLiving;
+			/// From bitmap `planet_color_ramps_ice.32bitImage`
+			/* 44h */	ResourceObjectPtr mpPlanetColorRampsIce;
+			/// From bitmap `planet_color_ramps_lava.32bitImage`
+			/* 48h */	ResourceObjectPtr mpPlanetColorRampsLava;
 			/// From bitmap `0xF30D0A76.32bitImage`
 			/* 4Ch */	ResourceObjectPtr field_4C;
-			/// From bitmap `0xC71EF96A.32bitImage`
+			/// From bitmap `JetStream.32bitImage`
 			/* 50h */	ResourceObjectPtr mpJetStream;
 			/// `pcawater.pcaw`
 			/* 54h */	ResourceObjectPtr mpPCAWater;
