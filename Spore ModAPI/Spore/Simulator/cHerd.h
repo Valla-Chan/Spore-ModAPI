@@ -44,7 +44,7 @@ namespace Simulator
 		/* 54h */	eastl::vector<cEggPtr> mEggs;
 		/* 68h */	eastl::vector<Vector3> mFeedingGrounds;
 		/* 7Ch */	bool mbCheckedForForests;
-		/// Index to `mFeedingGrounds`, maybe? Default is -1
+		/// Index to `mFeedingGrounds`, Default is -1
 		/* 80h */	int mCurrentFeedingGrounds;  // -1
 		/* 84h */	bool mOwnedByAvatar;
 		/* 85h */	bool mbShouldEvolve;  // true
