@@ -24,6 +24,7 @@
 #include <Spore\Simulator\ISimulatorSerializable.h>
 #include <EASTL\vector.h>
 
+#define cGameBundleGroundContainerPtr eastl::intrusive_ptr<Simulator::cGameBundleGroundContainer>
 #define cGameBundleContainerPtr eastl::intrusive_ptr<Simulator::cGameBundleContainer>
 #define cGameBundlePtr eastl::intrusive_ptr<Simulator::cGameBundle>
 
@@ -48,7 +49,7 @@ namespace Simulator
 		/* 120h */	int field_120;
 		/* 124h */	bool mLoose;
 		/* 128h */	cGameBundleContainerPtr mpContainer;
-		/* 12Ch */	int mType;
+		/* 12Ch */	TribeBundleType mType;
 		/* 130h */	int mDisplayType;
 		/* 134h */	int mAmountInBundle;  // not initialized
 		/* 138h */	bool field_138;
@@ -70,4 +71,11 @@ namespace Simulator
 		/* 20h */	int mBundleCapacity;
 	};
 	ASSERT_SIZE(cGameBundleContainer, 0x24);
+
+	// TODO: stub class
+	class cGameBundleGroundContainer
+		: public cGameBundleContainer
+	{
+		// mContainerCapacity = 1000
+	};
 }

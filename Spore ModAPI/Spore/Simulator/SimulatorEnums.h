@@ -785,11 +785,16 @@ namespace Simulator
 		kTribeToolClassOther = 3,
 	};
 
-	enum TribeBundleType
+	enum TribeBundleType : int
 	{
-		kTribeBundleTypeFruit = 1,
-		kTribeBundleTypeMeat = 2,
-		kTribeBundleTypeFish = 3,
+		kTribeBundleTypeSeaweed = 0,	// platter_seaweed_0x (always dropped?)
+		kTribeBundleTypeFruit = 1,		// platter_fruit_0x
+		kTribeBundleTypeMeat = 2,		// platter_meat_0x
+		kTribeBundleTypeFish = 3,		// platter_fish_0x
+		kTribeBundleTypeEgg = 4,		// platter_egg_0x
+		kTribeBundleTypeGift = 5,			// tt_gift
+		kTribeBundleTypeDomesticate = 6,	// trg_domesticfeed
+		kTribeBundleTypeSteal = 7,			// 0x57DC9CD4
 	};
 
 	enum TribeInputAction
