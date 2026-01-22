@@ -300,16 +300,17 @@ namespace App
 	/// @param object The object to which the method will be called.
 	/// @param function A void function with parameters, that will be executed after the scheduled time.
 	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
-	template <class ObjT, class MethodT, class... Args>
+	template <class ObjT, class MethodT, class... MethodArgs, class... CallArgs>
 	inline ScheduledTaskListenerPtr ScheduleTaskWithArgs(
 		ObjT* object,
-		void (MethodT::* method)(Args const&...),
+		void (MethodT::* method)(MethodArgs...),
 		float scheduleTime,
-		Args&&... args)
+		CallArgs&&... args)
 	{
 		static_assert(std::is_base_of_v<MethodT, ObjT>,
 			"Object must derive from method's class");
 
+		// Own the data safely for delayed execution
 		auto boundFunction = [object, method, args...]() {
 			(static_cast<MethodT*>(object)->*method)(args...);
 			};
@@ -435,16 +436,17 @@ namespace Simulator
 	/// @param object The object to which the method will be called.
 	/// @param method A void method with parameters, that will be executed after the scheduled time.
 	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
-	template <class ObjT, class MethodT, class... Args>
+	template <class ObjT, class MethodT, class... MethodArgs, class... CallArgs>
 	inline SimScheduledTaskListenerPtr ScheduleTaskWithArgs(
 		ObjT* object,
-		void (MethodT::* method)(Args const&...),
+		void (MethodT::* method)(MethodArgs...),
 		float scheduleTime,
-		Args&&... args)
+		CallArgs&&... args)
 	{
 		static_assert(std::is_base_of_v<MethodT, ObjT>,
 			"Object must derive from method's class");
 
+		// Own the data safely for delayed execution
 		auto boundFunction = [object, method, args...]() {
 			(static_cast<MethodT*>(object)->*method)(args...);
 			};
