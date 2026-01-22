@@ -31,7 +31,7 @@ namespace Simulator
 		float RemoveBundles(float amount, cGameBundleContainer* container, cGameBundle* bundle = nullptr);
 
 	public:
-		/* 1Ch */	cGameBundleGroundContainerPtr mpGroundContainer;  //TODO cGameBundleGroundContainerPtr
+		/* 1Ch */	cGameBundleGroundContainerPtr mpGroundContainer;
 	};
 	ASSERT_SIZE(cBundleManager, 0x20);
 

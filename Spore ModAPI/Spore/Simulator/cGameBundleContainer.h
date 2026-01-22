@@ -74,7 +74,8 @@ namespace Simulator
 
 	// TODO: stub class
 	class cGameBundleGroundContainer
-		: public cGameBundleContainer
+		: public cGameData
+		, public cGameBundleContainer
 	{
 		// mContainerCapacity = 1000
 	};
