@@ -49,7 +49,7 @@ namespace Simulator
 		/* 120h */	int field_120;
 		/* 124h */	bool mLoose;
 		/* 128h */	cGameBundleContainerPtr mpContainer;
-		/* 12Ch */	TribeBundleType mType;
+		/* 12Ch */	int mType; // Simulator::TribeBundleType
 		/* 130h */	int mDisplayType;
 		/* 134h */	int mAmountInBundle;  // not initialized
 		/* 138h */	bool field_138;
