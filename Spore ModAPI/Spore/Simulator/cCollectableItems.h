@@ -121,7 +121,6 @@ namespace Simulator
 		void sub_597BC0(UnkCategoryHashMap& dst, int, const ResourceKey& speciesKey);
 
 		// Called when cCreatureModeStrategy::ExecuteAction calls with an 'UnlockPart' action
-		// currently cannot be detoured without crashing?
 		void sub_597390(eastl::vector<int>& dst, struct cCollectableItemID itemID, int);
 
 	public:
