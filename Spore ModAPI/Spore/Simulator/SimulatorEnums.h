@@ -813,37 +813,37 @@ namespace Simulator
 
 	enum CitizenAction
 	{
-		//TODO there are more
+		// TODO there are more
 		kCitizenActionEat = 0,
 		kCitizenActionFish = 1,
 		kCitizenActionGather = 2,
 		kCitizenActionGrabTool = 3, // actionObject = cTribeTool
-
 		kCitizenActionWalkTo = 4, // actionObject = nullptr, cannot be manually called via DoAction
-
 		kCitizenActionHeal = 5,
-
 		kCitizenActionSleep = 6, // Sends the creature into the main tribe hut
-
 		kCitizenActionAttack = 7,  // Attack a citizen
 		kCitizenActionRaidFood = 8,
 		kCitizenActionGiftFood = 9,
 		kCitizenActionHunt = 10, // Attack a wild animal
 		kCitizenActionMate = 11,
 		kCitizenActionParty = 12, // Dance around the game object, actionObject = fire pit or other cTribeTool
-		kCitizenActionCollectEgg = 13,
+		kCitizenActionCollectEgg = 13, // Collect eggs from the pigpen
 		kCitizenActionBundle = 14,
-
 		kCitizenActionRaidHuts = 15, // Attack huts or tools of this tribe, starting with the actionObject = cTribeHut or cTribeTool
 
-		kCitizenActionFeedWild = 20,
+		//kCitizenActionFeedBaby = 16,
+		//kCitizenActionStealBaby = 17,
+		//kCitizenActionRetrieveBaby = 18,
+		//kCitizenActionSocialize = 19,
+
+		kCitizenActionFeedWild = 20, // feed wild animal
 		kCitizenActionGiftMember = 21,
 
+		// TODO: Feb 08 values are -1 these. verify these values.
 		kCitizenActionRepair = 24, // actionObject = cTribeHut or cTribeTool
 		kCitizenActionTame = 25,
 		kCitizenActionRecruit = 26, // Begin social minigame
 		kCitizenActionGatherMeat = 27,
-
 		kCitizenActionReturnToTribe = 28, // Sends the creature back to their tribe. actionObject = nullptr
 	};
 
