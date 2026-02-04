@@ -145,7 +145,9 @@ namespace Math
 		Vector2& operator+=(float);
 		Vector2& operator-=(const Vector2&);
 		Vector2& operator-=(float);
+		Vector2& operator*=(const Vector2&);
 		Vector2& operator*=(float);
+		Vector2& operator/=(const Vector2&);
 		Vector2& operator/=(float);
 
 		bool operator==(const Vector2& b) const;
@@ -200,7 +202,9 @@ namespace Math
 		Vector3& operator+=(float);
 		Vector3& operator-=(const Vector3&);
 		Vector3& operator-=(float);
+		Vector3& operator*=(const Vector3&);
 		Vector3& operator*=(float);
+		Vector3& operator/=(const Vector3&);
 		Vector3& operator/=(float);
 
 		bool operator==(const Vector3& b) const;
@@ -240,7 +244,9 @@ namespace Math
 		Vector4& operator+=(float);
 		Vector4& operator-=(const Vector4&);
 		Vector4& operator-=(float);
+		Vector4& operator*=(const Vector4&);
 		Vector4& operator*=(float);
+		Vector4& operator/=(const Vector4&);
 		Vector4& operator/=(float);
 
 		bool operator==(const Vector4& b) const;
@@ -990,9 +996,19 @@ namespace Math
 		y -= b;
 		return *this;
 	}
+	inline Vector2& Vector2::operator*=(const Vector2& b) {
+		x *= b.x;
+		y *= b.y;
+		return *this;
+	}
 	inline Vector2& Vector2::operator*=(float b) {
 		x *= b;
 		y *= b;
+		return *this;
+	}
+	inline Vector2& Vector2::operator/=(const Vector2& b) {
+		x /= b.x;
+		y /= b.y;
 		return *this;
 	}
 	inline Vector2& Vector2::operator/=(float b) {
@@ -1013,8 +1029,14 @@ namespace Math
 	inline Vector2 operator-(Vector2 a, float b) {
 		return a -= b;
 	}
+	inline Vector2 operator*(Vector2 a, const Vector2& b) {
+		return a *= b;
+	}
 	inline Vector2 operator*(Vector2 a, float b) {
 		return a *= b;
+	}
+	inline Vector2 operator/(Vector2 a, const Vector2& b) {
+		return a /= b;
 	}
 	inline Vector2 operator/(Vector2 a, float b) {
 		return a /= b;
@@ -1074,10 +1096,22 @@ namespace Math
 		z -= b;
 		return *this;
 	}
+	inline Vector3& Vector3::operator*=(const Vector3& b) {
+		x *= b.x;
+		y *= b.y;
+		z *= b.z;
+		return *this;
+	}
 	inline Vector3& Vector3::operator*=(float b) {
 		x *= b;
 		y *= b;
 		z *= b;
+		return *this;
+	}
+	inline Vector3& Vector3::operator/=(const Vector3& b) {
+		x /= b.x;
+		y /= b.y;
+		z /= b.z;
 		return *this;
 	}
 	inline Vector3& Vector3::operator/=(float b) {
@@ -1099,8 +1133,14 @@ namespace Math
 	inline Vector3 operator-(Vector3 a, float b) {
 		return a -= b;
 	}
+	inline Vector3 operator*(Vector3 a, const Vector3& b) {
+		return a *= b;
+	}
 	inline Vector3 operator*(Vector3 a, float b) {
 		return a *= b;
+	}
+	inline Vector3 operator/(Vector3 a, const Vector3& b) {
+		return a /= b;
 	}
 	inline Vector3 operator/(Vector3 a, float b) {
 		return a /= b;
@@ -1177,11 +1217,25 @@ namespace Math
 		w -= b;
 		return *this;
 	}
+	inline Vector4& Vector4::operator*=(const Vector4& b) {
+		x *= b.x;
+		y *= b.y;
+		z *= b.z;
+		w *= b.w;
+		return *this;
+	}
 	inline Vector4& Vector4::operator*=(float b) {
 		x *= b;
 		y *= b;
 		z *= b;
 		w *= b;
+		return *this;
+	}
+	inline Vector4& Vector4::operator/=(const Vector4& b) {
+		x /= b.x;
+		y /= b.y;
+		z /= b.z;
+		w /= b.w;
 		return *this;
 	}
 	inline Vector4& Vector4::operator/=(float b) {
@@ -1208,8 +1262,14 @@ namespace Math
 	inline Vector4 operator-(Vector4 a, float b) {
 		return a -= b;
 	}
+	inline Vector4 operator*(Vector4 a, const Vector4& b) {
+		return a *= b;
+	}
 	inline Vector4 operator*(Vector4 a, float b) {
 		return a *= b;
+	}
+	inline Vector4 operator/(Vector4 a, const Vector4& b) {
+		return a /= b;
 	}
 	inline Vector4 operator/(Vector4 a, float b) {
 		return a /= b;
@@ -1223,6 +1283,9 @@ namespace Math
 	}
 	inline Vector4 operator*(float a, const Vector4& b) {
 		return b * a;
+	}
+	inline Vector4 operator/(float a, const Vector4& b) {
+		return b / a;
 	}
 
 #ifndef SDK_TO_GHIDRA
