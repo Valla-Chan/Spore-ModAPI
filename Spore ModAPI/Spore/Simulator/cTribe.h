@@ -104,7 +104,7 @@ namespace Simulator
 		/* 268h */	float mRSquareSize;  // 10.0
 		/* 26Ch */	int field_26C;  // -1
 		/* 270h */	cGonzagoTimer mVignetteTimer;
-		/* 290h */	cTribePlannerPtr mpTribePlanner;
+		/* 290h */	cTribePlannerPtr mpTribePlanner; // only used for NPC tribes
 		/* 294h */	eastl::vector<int> field_294;
 		/* 2A8h */	eastl::vector<int> field_2A8;
 		/* 2BCh */	int field_2BC;
