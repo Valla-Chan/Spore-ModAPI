@@ -66,7 +66,7 @@ namespace Editors
 		/* 60h */	int field_60;
 		/* 64h */	UTFWin::IWindow* mWinLeftPanelFrame;  // 0x5100B176
 		/* 68h */	UTFWin::IWindow* mWinPartPaletteRoot;  // 0xF006F308
-		/* 6Ch */	UTFWin::IWindow* mWinPaintPaletteRoot;  // 0xF006F309
+		/* 6Ch */	UTFWin::IWindow* mWinPaintPaletteRoot;  // 0xF006F309, Also holds verbtray
 		/* 70h */	UTFWin::IWindow* mWinModelTypeBrowser;  // 0xD0353720,  Editor/Asset Type List Window
 		/* 74h */	int mGridTypes;  // IWinGrid*,  Editor Types?
 		/* 78h */	UTFWin::IWindow* mOriginalKeyboardCaptureTarget;
