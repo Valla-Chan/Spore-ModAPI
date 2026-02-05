@@ -79,7 +79,7 @@ namespace Simulator
 
 		kCreatureFlagIsHungry = 0x100,
 		kCreatureFlagIsPlayerAvatar = 0x200,
-		kCreatureFlagUnkAngry = 0x2000, // something to do with if the creature is currently attacking another?
+		kCreatureFlagUnk1 = 0x2000, // Unknown usage, may have to do with attacking others, used frequently in CRG
 	};
 
 	/// The base class for all creatures in the Simulator.
