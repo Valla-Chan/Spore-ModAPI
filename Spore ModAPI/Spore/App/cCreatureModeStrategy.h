@@ -143,7 +143,7 @@ namespace App
 			static const uint32_t ID = 0xD3353636;
 
 			cCreatureBase* creature;
-			cGameData* target;
+			cGameData* target; // cInteractableObject* or cCreatureBase*
 			int field_8; // 0
 			void* unk1; // unknown class?
 		};
@@ -152,7 +152,7 @@ namespace App
 			static const uint32_t ID = 0xD335362C;
 
 			cCreatureBase* creature;
-			cGameData* target;
+			cGameData* target; // cInteractableObject* or cCreatureBase*
 			int field_8; // 0
 			void* unk1; // unknown class?
 		};
