@@ -341,7 +341,7 @@ namespace Simulator
 		ObjectInstance = 8
 	};
 
-	/// Different kinds of surfaces where a tool can hit, usde by Simulator::cSpaceToolData.
+	/// Different kinds of surfaces where a tool can hit, used by Simulator::cSpaceToolData.
 	enum SpaceToolHit
 	{
 		kHitCombatant = 0,
@@ -350,7 +350,24 @@ namespace Simulator
 		kHitAir = 3
 	};
 
-	/// Different kinds of targets that a tool can shoot at, usde by Simulator::cSpaceToolData.
+	/// Different types of damage a Simulator::cCombatant can take
+	enum DamageType {
+		kExplosive = 0,
+		kHeat = 1,
+		kMelee = 2,
+		kCulture = 3,
+		kBribery = 4,
+		kStarvation = 5,
+		kCrushing = 6,
+		kDamageOverTime = 7,
+		kCollision = 8,
+		kDrowning = 9,
+		kHealing = 10,
+		kBlackCloud = 11,
+		kAdvertising = 12
+	};
+
+	/// Different kinds of targets that a tool can shoot at, used by Simulator::cSpaceToolData.
 	enum SpaceToolTarget
 	{
 		/* shr 0 */	kTargetAnimal = 1,
