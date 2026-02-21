@@ -252,7 +252,6 @@ namespace Simulator
 		Args(float amount, cGameBundleContainer* container, cGameBundle* bundle),
 		Args(amount, container, bundle));
 	
-	
 
 	cGameBundle* cBundleManager::CreateGroundBundles(float amount, int bundleType, const Vector3& position, const Quaternion& orientation) {
 		cGameBundle* bundles = CreateBundles(amount, mpGroundContainer.get(), bundleType);
