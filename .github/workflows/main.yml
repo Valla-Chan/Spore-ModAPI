@@ -134,7 +134,7 @@ jobs:
           python3 ../m.css/documentation/doxygen.py "Documentation/Doxygen-mcss.txt" --debug
 
       - name: Configure URL
-        run: echo "modapi-docs.sporecommunity.com" > modapi-generated-docs/html/CNAME
+        run: echo "modapi-docs.sporecommunity.com" > Spore-ModAPI/modapi-generated-docs/html/CNAME
 
       - name: Commit documentation pages
         run: |
