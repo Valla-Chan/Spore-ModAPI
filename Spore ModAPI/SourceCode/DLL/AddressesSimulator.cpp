@@ -1188,7 +1188,7 @@ namespace Simulator
 	namespace Addresses(cBundleManager) {
 		DefineAddress(Get, SelectAddress(0xB3D210, 0xB3D3B0));
 		DefineAddress(CreateBundles, SelectAddress(0xAC7810, 0xAC79F0));
-		DefineAddress(RemoveBundles, SelectAddress(0xAC7A70, 0x0)); // TODO: disk address
+		DefineAddress(RemoveBundles, SelectAddress(0xAC7A70, 0x00ac7c50));
 	}
 
 	namespace Addresses(cTribeInputStrategy) {
