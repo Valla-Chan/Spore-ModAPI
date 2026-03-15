@@ -136,14 +136,14 @@ namespace Terrain
 		, mpTextureCliff()
 		, mpAtmospherePackedCurves()
 		, mpAboveColorRamp()
-		, field_38()
-		, field_3C()
-		, field_40()
-		, field_44()
-		, field_48()
+		, mpAboveDetailNoise()
+		, mpPlanetColorRampsDead()
+		, mpPlanetColorRampsLiving()
+		, mpPlanetColorRampsIce()
+		, mpPlanetColorRampsLava()
 		, field_4C()
-		, field_50()
-		, field_54()
+		, mpJetStream()
+		, mpPCAWater()
 	{
 
 	}
@@ -175,7 +175,7 @@ namespace Terrain
 		, field_61C()
 		, field_620()
 		, field_624()
-		, field_7BC()
+		, mbEnableAmbientEffects()
 	{
 		memset(field_628, 0, sizeof(field_628));
 		memset(field_7C0, 0, sizeof(field_7C0));
