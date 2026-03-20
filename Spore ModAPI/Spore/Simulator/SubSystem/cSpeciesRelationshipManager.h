@@ -128,7 +128,7 @@ namespace Simulator
 		//static eRelationshipStatus GetRelationship(ResourceKey*, cCreatureBase*, cCreatureBase*);
 
 	public:
-		/* 1Ch */ int mNumOfKnowSpecies;
+		/* 1Ch */ int mNumOfKnownSpecies;
 		/* 1Ch */ int _padding_;
 		/* 1Ch */ int _padding_2;
 		/* 20h */ hash_map<ResourceKey, tRelationshipData> mSpeciesRelationshipMap;	//hash_map<ResourceKey, tRelationshipData>
