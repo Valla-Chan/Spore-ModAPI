@@ -43,7 +43,7 @@ namespace Sporepedia
 			/* 24h */	virtual bool func24h(eastl::vector<ResourceKey>& creation, int, const eastl::vector<QueryParameter>& parameters);
 			/* 28h */	virtual bool func28h(eastl::vector<ResourceKey>& dstKeys);//, int, const eastl::vector<QueryParameter>& parameters);
 			/* 2Ch */	virtual void FindObjects(eastl::vector<ResourceKey>& dst, const eastl::vector<Parameter>& parameters);
-			//TODO thse functions are placeholders
+			//TODO these functions are placeholders
 			/* 30h */	virtual bool func30h(eastl::vector<ResourceKey>& creations, uint32_t param_2, const eastl::vector<QueryParameter>& parameters);
 			/* 34h */	virtual bool func34h(eastl::vector<ResourceKey>& creations);
 			/* 38h */	virtual void func38h(eastl::vector<ResourceKey>& creations, const eastl::vector<QueryParameter>& parameters);
